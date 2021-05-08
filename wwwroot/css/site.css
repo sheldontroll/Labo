@@ -12,6 +12,7 @@ a {
   color: #0366d6;
 }
 
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -59,6 +60,7 @@ html {
 }
 
 body {
+  background-color: #f7f7f7;
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
@@ -84,5 +86,8 @@ div.carousel{
   height: 400px;
   padding-bottom: 400px;
   position: relative;
+}
+div.titulo{
+  text-align: center; 
 }
 

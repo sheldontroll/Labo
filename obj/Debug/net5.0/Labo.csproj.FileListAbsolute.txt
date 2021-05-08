@@ -164,3 +164,4 @@ C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\ref\La
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Labo.pdb
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Labo.genruntimeconfig.cache
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Razor\Views\Home\Reserva.cshtml.g.cs
+C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Razor\Views\Home\Tipos.cshtml.g.cs

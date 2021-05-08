@@ -15654,6 +15654,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Views\\Home\\Tipos.cshtml",
+      "TargetPath": "Views\\Home\\Tipos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
