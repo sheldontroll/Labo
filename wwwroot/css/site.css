@@ -76,3 +76,13 @@ h1{
   margin-bottom: 60px;
   text-align: center;
 }
+div.carousel{
+  height: 100%;
+  padding: 50;
+  margin: 0 auto;
+  width: 500px;
+  height: 400px;
+  padding-bottom: 400px;
+  position: relative;
+}
+
