@@ -149,7 +149,6 @@ C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Labo.R
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Razor\Views\Home\Contactanos.cshtml.g.cs
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -164,3 +163,4 @@ C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Labo.d
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\ref\Labo.dll
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Labo.pdb
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Labo.genruntimeconfig.cache
+C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\obj\Debug\net5.0\Razor\Views\Home\Reserva.cshtml.g.cs
