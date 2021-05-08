@@ -1,3 +1,4 @@
-# Labo
-PrograLabo
-si
+# LaboUSMP
+## Instrucciones
+* Clonar branch 
+* Editar 
