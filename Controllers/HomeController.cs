@@ -23,8 +23,9 @@ namespace Labo.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Reserva(ContactoReserva objReserva)
         {
+            ViewData["Message"]="Se reservo su cita y se envio un mensaje"+objReserva.email;
             return View();
         }
 
