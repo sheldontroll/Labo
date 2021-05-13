@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Labo.csproj": {}
+    "C:\\Users\\NESTOR\\Desktop\\cristhian usmp\\trabajo grupal\\Labo\\Labo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Labo.csproj": {
+    "C:\\Users\\NESTOR\\Desktop\\cristhian usmp\\trabajo grupal\\Labo\\Labo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Labo.csproj",
+        "projectUniqueName": "C:\\Users\\NESTOR\\Desktop\\cristhian usmp\\trabajo grupal\\Labo\\Labo.csproj",
         "projectName": "Labo",
-        "projectPath": "C:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Labo.csproj",
-        "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\obj\\",
+        "projectPath": "C:\\Users\\NESTOR\\Desktop\\cristhian usmp\\trabajo grupal\\Labo\\Labo.csproj",
+        "packagesPath": "C:\\Users\\NESTOR\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\NESTOR\\Desktop\\cristhian usmp\\trabajo grupal\\Labo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\NESTOR\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -57,6 +57,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[5.0.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             }
           },
           "imports": [
@@ -77,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
