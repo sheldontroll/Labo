@@ -38,10 +38,10 @@ namespace appventas.Controllers
         }
 
         [HttpPost]
-        public IActionResult Reserva(Contacto objContacto)
+        public IActionResult Reserva(Contacto objReserva)
         {
-            objContacto.Status = "Registrado";
-            ViewData["Message"] = "El contacto ya esta " + objContacto.Status;
+            objReserva.Status = "Registrado";
+            ViewData["Message"] = "El contacto ya esta " + objReserva.Status;
             return View();
         }
 
