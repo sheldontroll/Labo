@@ -5,6 +5,8 @@ namespace Labo.Models
         public string email { get; set; }
         public string direc1{ get; set; }
         public string direc2{ get; set; }
-        public string ciudad { get; set; }
+        public string ciudad { get; set; } 
+         public int id { get; set; }
+
     }
 }
