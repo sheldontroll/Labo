@@ -12,5 +12,7 @@ namespace Labo.Data
             : base(options)
         {
         }
+                public DbSet<Labo.Models.Contacto> DataContactos { get; set; }
+
     }
 }
