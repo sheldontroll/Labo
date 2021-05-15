@@ -23,11 +23,6 @@ namespace Labo.Controllers
             return View();
         }
 
-        public IActionResult Reserva(ContactoReserva objReserva)
-        {
-            ViewData["Message"]="Se reservo su cita y se envio un mensaje"+objReserva.email;
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
