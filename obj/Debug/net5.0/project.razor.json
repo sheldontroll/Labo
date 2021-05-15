@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Labo.csproj",
+  "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Labo.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15619,53 +15619,88 @@
   "RootNamespace": "Labo",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Home\\Contactanos.cshtml",
+      "TargetPath": "Views\\Home\\Contactanos.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Views\\Shared\\_LoginPartial.cshtml",
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Shared\\_LoginPartial.cshtml",
       "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Views\\Home\\Reserva.cshtml",
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Cliente\\Sintomas.cshtml",
+      "TargetPath": "Views\\Cliente\\Sintomas.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Cliente\\Pago.cshtml",
+      "TargetPath": "Views\\Cliente\\Pago.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Home\\Reserva.cshtml",
       "TargetPath": "Views\\Home\\Reserva.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Views\\Shared\\Error.cshtml",
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Cliente\\ReservaDomicilio.cshtml",
+      "TargetPath": "Views\\Cliente\\ReservaDomicilio.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Cliente\\ValidaCliente.cshtml",
+      "TargetPath": "Views\\Cliente\\ValidaCliente.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Cliente\\Reserva.cshtml",
+      "TargetPath": "Views\\Cliente\\Reserva.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Cliente\\ClienteIndex.cshtml",
+      "TargetPath": "Views\\Cliente\\ClienteIndex.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo\\Views\\Home\\Contactanos.cshtml",
-      "TargetPath": "Views\\Home\\Contactanos.cshtml",
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Programacion1\\ProyectoL\\Labo\\Views\\Cliente\\DatosCliente.cshtml",
+      "TargetPath": "Views\\Cliente\\DatosCliente.cshtml",
       "FileKind": "mvc"
     }
   ],
