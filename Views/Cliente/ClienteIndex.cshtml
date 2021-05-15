@@ -9,26 +9,27 @@
 }
 
 <h1>@ViewData["Title"]</h1>
-<hr size=3;>
+<hr size=3>
+<form>
+  <div class="row flex-center" style="text-align: center;">
+      <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="Reserva">Atención en Laboratorio</button>
+  </div>
+  <br>
+  <div class="row flex-center" style="text-align: center;">
+      <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="ReservaDomicilio">Atención a domicilio</button> 
+  </div>
 
-<div class="row flex-center" style="text-align: center;">
-    <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary">Atención en Laboratorio</button>
-</div>
-<br>
-<div class="row flex-center" style="text-align: center;">
-    <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary">Atención a domicilio</button> 
-</div>
-<br><br>
-<h1>Tus pruebas programadas</h1>
-<hr size=41>
-<div class="row flex-center" style="text-align: center;">
-    <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary">Resultados</button>
-</div>
-<br>
-<div class="row flex-center" style="text-align: center;">
-    <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary">Pruebas Agendadas</button> 
-</div>
-
+  <br><br>
+  <h1>Tus pruebas programadas</h1>
+  <hr size=41>
+  <div class="row flex-center" style="text-align: center;">
+      <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary">Resultados</button>
+  </div>
+  <br>
+  <div class="row flex-center" style="text-align: center;">
+      <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary">Pruebas Agendadas</button> 
+  </div>
+</form>
 </body>
 <footer>
 

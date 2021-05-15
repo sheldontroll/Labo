@@ -33,7 +33,18 @@ namespace Labo.Controllers
         }
         public IActionResult DatosCliente(ContactoReserva objReserva)
         {
-            //ViewData["Message"]="Se reservo su cita y se envio un mensaje"+objReserva.email;
+            return View();
+        }
+        public IActionResult Sintomas(ContactoReserva objReserva)
+        {
+            return View();
+        }
+        public IActionResult Pago(ContactoReserva objReserva)
+        {
+            return View();
+        }
+        public IActionResult ValidaCliente(ContactoReserva objReserva)
+        {
             return View();
         }
 

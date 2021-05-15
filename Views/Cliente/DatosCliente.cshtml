@@ -5,56 +5,80 @@
 
 <body>
   @{
-    ViewData["Title"] = "Datos de la atención";
+    ViewData["Title"] = "Ingresa los datos del paciente";
 }
 
 <h1>@ViewData["Title"]</h1>
-  <form>
-    
+<hr size=3>
+  <form>    
     <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="ejemplo gmail.com" >
+      <div class="form-group col-md-6" style="margin: 0 auto;">
+        <label for="Nombre">Nombres</label>
+        <input type="email" class="form-control" id="Nombre" required="required" >
       </div>  
     </div>
 
-      <div class="form-group">
-          <label for="inputAddress">Dirección</label>
-          <input type="text" class="form-control" id="direc1" placeholder="ejemplo Av.Flora tristan">
-      </div>
-      <div class="form-group">
-          <label for="inputAddress2">Dirección 2 (Opcional)</label>
-          <input type="text" class="form-control" id="direc2" placeholder="ejemplo Apartamento,piso o estudio">
-      </div>
-      <div class="form-row">
-          <div class="form-group col-md-6">
-          <label for="inputCity">Ciudad</label>
-          <input type="text" class="form-control" id="ciudad" placeholder="ejemplo Lima">
-          </div>
-      </div>
-
-      <div class="form-row">
-          <div class="form-group col-md-6">
-          <label for="inputState">Tipo de Prueba</label>
-          <select id="State" class="form-control">
-              <option selected>Antigenos</option>
-              <option>PCR</option>
-              <option>TestRapido</option>
-              <option>TMA</option>
-              <option>CLIA</option>
-          </select>
-          </div>
-      </div>    
-      <div class="form-row">
-          <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
-          <label class="form-check-label" for="gridCheck">
-            Acepto los terminos y condiciones.
-          </label>
-          </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar Reserva</button>
+    <div class="form-row">
+      <div class="form-group col-md-6" style="margin: 0 auto;">
+        <label for="Apellido">Apellidos</label>
+        <input type="text" class="form-control" id="Apellido" required="required" >
+      </div>  
     </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6" style="margin: 0 auto;">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="ejemplo@gmail.com" required="required" >
+      </div>  
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6" style="margin: 0 auto;">
+        <label for="Tipodocumento">Ingresa tu documento de identidad</label>
+        <div class="form-inline">
+          <select id="Tipodocumento" class="form-control" required="required" >
+                <option selected>DNI</option>
+                <option>CE</option>
+                <option>Pasaporte</option>
+            </select>
+          <div class="col-md-4">
+            <input type="text" class="form-control" id="Documento">
+          </div>
+        </div>
+      </div>  
+    </div>
+
+   <div class="form-row">
+      <div class="form-group col-md-6" style="margin: 0 auto;">
+        <label for="Sexo">Selecciona tu sexo</label>
+        <select id="Sexo" class="form-control" required="required" >
+            <option selected>Masculino</option>
+            <option>Femenino</option>
+        </select>
+      </div>
+    </div> 
+     
+    <div class="form-row">
+      <div class="form-group col-md-6" style="margin: 0 auto;">
+        <label for="FecNac">Selecciona tu Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="FecNac" required="required" >
+      </div>
+    </div> 
+    
+    <div class="form-row">
+      <div class="form-group col-md-6" style="margin: 0 auto;">
+        <label for="Celular">Ingresa tu celular</label>
+        <input type="number" class="form-control" id="Celular" required="required" >
+      </div>
+    </div> 
+
+        
+    <br><br>
+    <div style="text-align: center;">
+      <button style="margin: 0 auto;" type="submit" class="btn btn-primary">Atras</button>
+      <button style="margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="Sintomas">Siguiente</button>
+    </div>
+
   </form>
   <h1 class="mensajeRegistrar">@ViewData["Message"]</h1>  
 </body>

@@ -9,6 +9,7 @@
 }
 
 <h1>@ViewData["Title"]</h1>
+<hr size=3>
   <form>    
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
@@ -69,8 +70,8 @@
     </div> 
     <br><br>
     <div style="text-align: center;">
-      <button style="margin: 0 auto;" type="submit" class="btn btn-primary">Atras</button>
-      <button style="margin: 0 auto;" type="submit" class="btn btn-primary">Siguiente</button>
+      <button style="margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="ClienteIndex">Atras</button>
+      <button style="margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="DatosCliente">Siguiente</button>
     </div>  
     
     
