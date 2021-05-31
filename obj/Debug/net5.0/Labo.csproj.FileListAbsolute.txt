@@ -182,3 +182,4 @@ C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_Vie
 C:\Programacion1\ProyectoL\Labo\bin\Debug\net5.0\Npgsql.dll
 C:\Programacion1\ProyectoL\Labo\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Contactanos\Nocliente.cshtml.g.cs
+C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Shared\_MenuPartial.cshtml.g.cs

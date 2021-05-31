@@ -22,15 +22,8 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Conócenos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="ClienteIndex">Reservar Prueba</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="Sintomas">Ingresa Tus síntomas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Contactanos" asp-action="Nocliente">Contactanos</a>
-                        </li>
+                       
+                        <partial name="_MenuPartial" /> 
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
