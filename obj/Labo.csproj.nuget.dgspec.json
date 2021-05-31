@@ -52,7 +52,7 @@
               "target": "Package",
               "version": "[5.0.4, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.4, )"
             },
@@ -60,13 +60,9 @@
               "target": "Package",
               "version": "[5.0.4, )"
             },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[5.0.2, )"
-            },
-            "microsoft.entityframeworkcore.sqlserver": {
-              "target": "Package",
-              "version": "[5.0.6, )"
             }
           },
           "imports": [
