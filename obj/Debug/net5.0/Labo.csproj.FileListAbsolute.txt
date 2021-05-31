@@ -58,7 +58,6 @@ C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Labo.dll
 C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\ref\Labo.dll
 C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Labo.pdb
 C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Labo.genruntimeconfig.cache
-C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Home\Contactanos.cshtml.g.cs
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\bin\Debug\net5.0\appsettings.json
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo\bin\Debug\net5.0\app.db
@@ -182,3 +181,4 @@ C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_Val
 C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Programacion1\ProyectoL\Labo\bin\Debug\net5.0\Npgsql.dll
 C:\Programacion1\ProyectoL\Labo\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Contactanos\Nocliente.cshtml.g.cs
