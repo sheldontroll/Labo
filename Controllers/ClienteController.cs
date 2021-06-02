@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Labo.Models;
 
+
 namespace Labo.Controllers
 {
     public class ClienteController : Controller
@@ -23,27 +24,47 @@ namespace Labo.Controllers
             return View();
         }
 
-        public IActionResult Reserva(ContactoReserva objReserva)
+        public IActionResult Reserva()
         {           
-            return View();
+            Reserva r = new Reserva();  
+         //   r.horaPrueba = PopulateHora();
+        //    r.tipoPrueba = PopulateTipo(); 
+         //   r.sedePrueba = PopulateSede();  
+            return View(r);  
         }
-        public IActionResult ReservaDomicilio(ContactoReserva objReserva)
+
+         [HttpPost]  
+        public ActionResult Reserva(Reserva r)  
+        {  
+    //    r.horaPrueba = PopulateHora();  
+      //  var selectedItem = r.Fruits.Find(p => p.Value == r.FruitId.ToString());  
+     //   if (selectedItem != null)  
+      //  {  
+      //      selectedItem.Selected = true;  
+      //      ViewBag.Message = "Fruit: " + selectedItem.Text;  
+      //      ViewBag.Message += "\\nQuantity: " + r.Quantity;  
+     //   }  
+   
+        return View();  
+    } 
+
+        public IActionResult ReservaDomicilio()
         {
             return View();
         }
-        public IActionResult DatosCliente(ContactoReserva objReserva)
+        public IActionResult DatosCliente()
         {
             return View();
         }
-        public IActionResult Sintomas(ContactoReserva objReserva)
+        public IActionResult Sintomas()
         {
             return View();
         }
-        public IActionResult Pago(ContactoReserva objReserva)
+        public IActionResult Pago()
         {
             return View();
         }
-        public IActionResult ValidaCliente(ContactoReserva objReserva)
+        public IActionResult ValidaCliente()
         {
             return View();
         }

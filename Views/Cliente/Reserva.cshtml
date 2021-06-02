@@ -1,3 +1,5 @@
+@model Labo.Models.Reserva
+
 <html>
 <head>
   <link rel="stylesheet" href="~/css/site.css" />
@@ -13,7 +15,7 @@
   <form>    
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
-        <label for="inputState">Selecciona tu tipo de prueba</label>
+        <label for="inputState">Selecciona tu fecha de prueba</label>
         <input type="date" class="form-control" id="fechaPrueba" placeholder="ejemplo Lima">
       </div>
     </div> 
@@ -67,6 +69,7 @@
         </select>
       </div>
     </div> 
+    <input id="TipoReserva" name="TipoReserva" type="hidden" value="En Clínica">
     <br><br>
     <div style="text-align: center;">
       <button style="margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="ClienteIndex">Atras</button>
