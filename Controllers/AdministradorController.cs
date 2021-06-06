@@ -17,7 +17,6 @@ namespace Labo.Controllers
         public AdministradorController(ApplicationDbContext context) {
             _context = context;
         }
-
         public IActionResult pruebas() {
             var pruebas = _context.DataPruebas.OrderBy(r => r.Nombre).ToList();
             return View(pruebas);
