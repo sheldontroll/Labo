@@ -48,6 +48,19 @@ namespace Labo.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "DataPruebas",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Nombre = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DataPruebas", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -153,6 +166,102 @@ namespace Labo.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "DataContactanos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Nombre = table.Column<string>(type: "text", nullable: true),
+                    Email = table.Column<string>(type: "text", nullable: true),
+                    numero = table.Column<int>(type: "integer", nullable: false),
+                    PruebaId = table.Column<int>(type: "integer", nullable: false),
+                    Mensaje = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DataContactanos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_DataContactanos_DataPruebas_PruebaId",
+                        column: x => x.PruebaId,
+                        principalTable: "DataPruebas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DataReservas",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    fechaPrueba = table.Column<string>(type: "text", nullable: true),
+                    horaPrueba = table.Column<string>(type: "text", nullable: true),
+                    PruebaId = table.Column<int>(type: "integer", nullable: false),
+                    ContactanosId = table.Column<int>(type: "integer", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DataReservas", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_DataReservas_DataContactanos_ContactanosId",
+                        column: x => x.ContactanosId,
+                        principalTable: "DataContactanos",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_DataReservas_DataPruebas_PruebaId",
+                        column: x => x.PruebaId,
+                        principalTable: "DataPruebas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DataClientes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ReservaId = table.Column<int>(type: "integer", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DataClientes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_DataClientes_DataReservas_ReservaId",
+                        column: x => x.ReservaId,
+                        principalTable: "DataReservas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DataOMs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ClienteId = table.Column<int>(type: "integer", nullable: true),
+                    ReservaId = table.Column<int>(type: "integer", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DataOMs", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_DataOMs_DataClientes_ClienteId",
+                        column: x => x.ClienteId,
+                        principalTable: "DataClientes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_DataOMs_DataReservas_ReservaId",
+                        column: x => x.ReservaId,
+                        principalTable: "DataReservas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -189,6 +298,36 @@ namespace Labo.Data.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DataClientes_ReservaId",
+                table: "DataClientes",
+                column: "ReservaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DataContactanos_PruebaId",
+                table: "DataContactanos",
+                column: "PruebaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DataOMs_ClienteId",
+                table: "DataOMs",
+                column: "ClienteId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DataOMs_ReservaId",
+                table: "DataOMs",
+                column: "ReservaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DataReservas_ContactanosId",
+                table: "DataReservas",
+                column: "ContactanosId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DataReservas_PruebaId",
+                table: "DataReservas",
+                column: "PruebaId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -209,10 +348,25 @@ namespace Labo.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "DataOMs");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "DataClientes");
+
+            migrationBuilder.DropTable(
+                name: "DataReservas");
+
+            migrationBuilder.DropTable(
+                name: "DataContactanos");
+
+            migrationBuilder.DropTable(
+                name: "DataPruebas");
         }
     }
 }

@@ -1,0 +1,57 @@
+@model Labo.Models.Contactanos
+
+<html>
+<head>
+  <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+  @{
+    ViewData["Title"] = "Contáctanos";
+}
+<h1>@ViewData["Title"]</h1>
+  <form>
+      <div class="form-group">
+        <div class="form-group col-md-6" style="margin: 0 auto;">
+          <label for="Nombre">Nombre Completo</label>
+          <input type="text" class="form-control" id="Nombre" >
+          </div>
+      </div>
+      <div class="form-group">
+        <div class="form-group col-md-6" style="margin: 0 auto;">
+          <label for="Email">Email</label>
+          <input type="email" class="form-control" id="Email" placeholder="ejemplo@gmail.com" >
+        </div>  
+      </div>
+
+      <div class="form-group">
+        <div class="form-group col-md-6" style="margin: 0 auto;">
+          <label for="numero">Número de contacto</label>
+          <input type="number" class="form-control" id="numero">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-group col-md-6" style="margin: 0 auto;">
+          <label for="Prueba">Selecciona tu tipo de prueba</label>
+          <select asp-for="PruebaId" asp-items="ViewBag.DataPruebas" type="text" class="form-control"></select>       
+        </div>
+      </div>  
+
+      <div class="form-group">
+        <div class="form-group col-md-6" style="margin: 0 auto;">
+          <label for="Mensaje">Mensaje</label>
+          <textarea type="file" class="form-control" id="Mensaje" >Escribe aquí tus comentarios</textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </form>
+  <h1 class="mensajeRegistrar">@ViewData["Message"]</h1>  
+</body>
+<footer>
+
+</footer>
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+</html>
+

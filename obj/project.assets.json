@@ -7559,11 +7559,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Users\\MRios\\Desktop\\USMP\\Cursos\\Prog I\\Laboratorio\\LapUsmp\\Labo\\Labo.csproj",
+      "projectUniqueName": "D:\\Users\\MRios\\Desktop\\USMP\\Cursos\\Prog I\\Laboratorio\\LapUsmp\\Labo\\Labo.csproj",
       "projectName": "Labo",
-      "projectPath": "d:\\Users\\MRios\\Desktop\\USMP\\Cursos\\Prog I\\Laboratorio\\LapUsmp\\Labo\\Labo.csproj",
+      "projectPath": "D:\\Users\\MRios\\Desktop\\USMP\\Cursos\\Prog I\\Laboratorio\\LapUsmp\\Labo\\Labo.csproj",
       "packagesPath": "C:\\Users\\MRios\\.nuget\\packages\\",
-      "outputPath": "d:\\Users\\MRios\\Desktop\\USMP\\Cursos\\Prog I\\Laboratorio\\LapUsmp\\Labo\\obj\\",
+      "outputPath": "D:\\Users\\MRios\\Desktop\\USMP\\Cursos\\Prog I\\Laboratorio\\LapUsmp\\Labo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MRios\\AppData\\Roaming\\NuGet\\NuGet.Config"

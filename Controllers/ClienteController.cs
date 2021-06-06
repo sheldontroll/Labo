@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Labo.Models;
-
+using Labo.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Labo.Controllers
 {
     public class ClienteController : Controller
     {
-        private readonly ILogger<ClienteController> _logger;
-
-        public ClienteController(ILogger<ClienteController> logger)
-        {
-            _logger = logger;
+        private readonly ApplicationDbContext _context;
+        public ClienteController(ApplicationDbContext context) {
+            _context = context;
         }
 
         public IActionResult ClienteIndex()
@@ -26,13 +25,11 @@ namespace Labo.Controllers
 
         public IActionResult Reserva()
         {           
-            Reserva r = new Reserva();  
-         //   r.horaPrueba = PopulateHora();
-        //    r.tipoPrueba = PopulateTipo(); 
-         //   r.sedePrueba = PopulateSede();  
-            return View(r);  
+            ViewBag.DataPruebas = _context.DataPruebas.ToList().Select(r => new SelectListItem(r.Nombre, r.Id.ToString()));  
+            return View();  
         }
 
+       
          [HttpPost]  
         public ActionResult Reserva(Reserva r)  
         {  

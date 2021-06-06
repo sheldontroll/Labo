@@ -15,13 +15,13 @@
   <form>    
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
-        <label for="inputState">Selecciona tu fecha de prueba</label>
-        <input type="date" class="form-control" id="fechaPrueba" placeholder="ejemplo Lima">
+        <label for="fechaPrueba">Selecciona tu fecha de prueba</label>
+        <input type="date" class="form-control" id="fechaPrueba">
       </div>
     </div> 
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
-        <label for="inputState">Seleccionada tu horario de atención</label>
+        <label for="horaPrueba">Seleccionada tu horario de atención</label>
         <select id="horaPrueba" class="form-control">
             <option selected>8:00 am</option>
             <option>8:30 am</option>
@@ -48,28 +48,11 @@
     </div> 
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
-        <label for="inputState">Selecciona tu tipo de prueba</label>
-        <select id="tipoPrueba" class="form-control">
-            <option selected>Antigenos</option>
-            <option>PCR</option>
-            <option>TestRapido</option>
-            <option>TMA</option>
-            <option>CLIA</option>
-        </select>
+        <label for="Prueba">Selecciona tu tipo de prueba</label>
+        <select asp-for="PruebaId" asp-items="ViewBag.DataPruebas" type="text" class="form-control"></select>        
       </div>
     </div>
-    <div class="form-row">
-      <div class="form-group col-md-6" style="margin: 0 auto;">
-        <label for="inputState">Selecciona tu sede</label>
-        <select id="sedePrueba" class="form-control">
-            <option selected>San Borja</option>
-            <option>Surco</option>
-            <option>La Molina</option>
-            <option>San Luis</option>
-        </select>
-      </div>
-    </div> 
-    <input id="TipoReserva" name="TipoReserva" type="hidden" value="En Clínica">
+
     <br><br>
     <div style="text-align: center;">
       <button style="margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="ClienteIndex">Atras</button>
