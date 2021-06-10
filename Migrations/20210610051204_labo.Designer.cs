@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Labo.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210531201247_labo")]
+    [Migration("20210610051204_labo")]
     partial class labo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,6 +30,9 @@ namespace Labo.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("apellidos")
+                        .HasColumnType("text");
+
+                    b.Property<string>("asunto")
                         .HasColumnType("text");
 
                     b.Property<string>("email")

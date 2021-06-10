@@ -56,6 +56,7 @@ namespace Labo.Migrations
                     nombres = table.Column<string>(type: "text", nullable: false),
                     apellidos = table.Column<string>(type: "text", nullable: true),
                     numerocontacto = table.Column<string>(type: "text", nullable: true),
+                    asunto = table.Column<string>(type: "text", nullable: true),
                     email = table.Column<string>(type: "text", nullable: true),
                     mensaje = table.Column<string>(type: "text", nullable: true)
                 },

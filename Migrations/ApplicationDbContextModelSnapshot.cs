@@ -30,6 +30,9 @@ namespace Labo.Migrations
                     b.Property<string>("apellidos")
                         .HasColumnType("text");
 
+                    b.Property<string>("asunto")
+                        .HasColumnType("text");
+
                     b.Property<string>("email")
                         .HasColumnType("text");
 
