@@ -1,3 +1,4 @@
+@model Cliente
 <html>
 <head>
   <link rel="stylesheet" href="~/css/site.css" />
@@ -10,45 +11,45 @@
 
 <h1>@ViewData["Title"]</h1>
 <hr size=3>
-  <form>    
+  <form action="" method="post">    
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
-        <label for="Nombre">Nombres</label>
-        <input type="email" class="form-control" id="Nombre" required="required" >
+        <label asp-for="Foto">Foto de Cliente</label>
+        <input type="text" class="form-control" asp-for="Foto" >
       </div>  
     </div>
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
-        <label for="Nombre">Nombres</label>
-        <input type="text" class="form-control" id="Nombre" required="required" >
-      </div>  
-    </div>
-
-    <div class="form-row">
-      <div class="form-group col-md-6" style="margin: 0 auto;">
-        <label for="Apellido">Apellidos</label>
-        <input type="text" class="form-control" id="Apellido" required="required" >
+        <label asp-for="Nombre">Nombres</label>
+        <input type="text" class="form-control" asp-for="Nombre" >
       </div>  
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
-        <label for="Email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="ejemplo@gmail.com" required="required" >
+        <label asp-for="Apellido">Apellidos</label>
+        <input type="text" class="form-control" asp-for="Apellido" >
       </div>  
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
-        <label for="Tipodocumento">Ingresa tu documento de identidad</label>
+        <label asp-for="Email">Email</label>
+        <input type="email" class="form-control" asp-for="Email" placeholder="ejemplo@gmail.com" >
+      </div>  
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6" style="margin: 0 auto;">
+        <label asp-for="Tipodocumento">Ingresa tu documento de identidad</label>
         <div class="form-inline">
-          <select id="Tipodocumento" class="form-control" required="required" >
-                <option selected>DNI</option>
-                <option>CE</option>
-                <option>Pasaporte</option>
+          <select asp-for="Tipodocumento" class="form-control" >
+                <option value="DNI">DNI</option>
+                <option value="CE">CE</option>
+                <option value="PAS">Pasaporte</option>
             </select>
           <div class="col-md-4">
-            <input type="text" class="form-control" id="Documento">
+            <input type="text" class="form-control" asp-for="Documento">
           </div>
         </div>
       </div>  
@@ -56,33 +57,33 @@
 
    <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
-        <label for="Sexo">Selecciona tu sexo</label>
-        <select id="Sexo" class="form-control" required="required" >
-            <option selected>Masculino</option>
-            <option>Femenino</option>
+        <label asp-for="Sexo">Selecciona tu sexo</label>
+        <select asp-for="Sexo" class="form-control" required="required" >
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
         </select>
       </div>
     </div> 
      
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
-        <label for="FecNac">Selecciona tu Fecha de Nacimiento</label>
-        <input type="date" class="form-control" id="FecNac" required="required" >
+        <label asp-for="FecNac">Selecciona tu Fecha de Nacimiento</label>
+        <input type="date" class="form-control" asp-for="FecNac" required="required" >
       </div>
     </div> 
     
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
-        <label for="Celular">Ingresa tu celular</label>
-        <input type="number" class="form-control" id="Celular" required="required" >
+        <label asp-for="Celular">Ingresa tu celular</label>
+        <input type="number" class="form-control" asp-for="Celular" required="required" >
       </div>
     </div> 
 
         
     <br><br>
     <div style="text-align: center;">
-      <button style="margin: 0 auto;" type="submit" class="btn btn-primary">Atras</button>
-      <button style="margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="Sintomas">Siguiente</button>
+      <button style="margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="ClienteIndex">Atras</button>
+      <button style="margin: 0 auto;" type="submit" class="btn btn-primary">Siguiente</button>
     </div>
 
   </form>

@@ -15,11 +15,9 @@ namespace Labo.Models
         [Required(ErrorMessage = "Por favor ingrese Nombre")]
         [Display(Name="Nombre")]
         public string nombres {get;set;}
-
         public string apellidos {get;set;}
-
         public string numerocontacto {get;set;}
-
+        public string asunto {get;set;}
         public string email {get;set;}
 
         public string mensaje {get;set;}
