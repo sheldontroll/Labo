@@ -18,6 +18,8 @@ namespace Labo.Models
         public string apellidos {get;set;}
         public string numerocontacto {get;set;}
         public string asunto {get;set;}
+
+
         public string email {get;set;}
 
         public string mensaje {get;set;}
