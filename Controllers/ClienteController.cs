@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Labo.Models;
+using Labo.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Labo.Controllers
 {
     public class ClienteController : Controller
     {
+        private readonly ApplicationDbContext _context;
         private readonly ILogger<ClienteController> _logger;
-
-        public ClienteController(ILogger<ClienteController> logger)
-        {
+        public ClienteController(ILogger<ClienteController> logger, ApplicationDbContext context) {
+            _context = context;
             _logger = logger;
         }
 
@@ -23,27 +25,36 @@ namespace Labo.Controllers
             return View();
         }
 
-        public IActionResult Reserva(ContactoReserva objReserva)
-        {           
-            return View();
+         public IActionResult Reserva(){           
+            ViewBag.DataPruebas = _context.DataPruebas.ToList().Select(r => new SelectListItem(r.Nombre, r.Id.ToString()));  
+            return View();  
         }
-        public IActionResult ReservaDomicilio(ContactoReserva objReserva)
+        public IActionResult ReservaDomicilio()
         {
             return View();
         }
-        public IActionResult DatosCliente(ContactoReserva objReserva)
+        public IActionResult DatosCliente() {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult DatosCliente(Cliente c) {
+            if (ModelState.IsValid) {
+                _context.Add(c);
+                _context.SaveChanges();
+                return RedirectToAction("Reserva");
+            }
+            return View(c);
+        }
+        public IActionResult Sintomas()
         {
             return View();
         }
-        public IActionResult Sintomas(ContactoReserva objReserva)
+        public IActionResult Pago()
         {
             return View();
         }
-        public IActionResult Pago(ContactoReserva objReserva)
-        {
-            return View();
-        }
-        public IActionResult ValidaCliente(ContactoReserva objReserva)
+        public IActionResult ValidaCliente()
         {
             return View();
         }

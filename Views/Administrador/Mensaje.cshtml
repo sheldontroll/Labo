@@ -1,0 +1,27 @@
+@model List<Contactanos>
+
+
+<h1>Lista de Mensajes</h1>
+
+<table class="table border">
+    <tr>
+        <th>ID</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Documento</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.ID</td>
+            <td>@item.ID</td>             
+            <td>@item.ID</td> 
+        </tr>
+    }
+    @if (Model.Count == 0) {
+        <tr>
+            <td colspan="4" class="text-center">No se encontraron Mensajes enviados</td>
+        </tr>
+    }
+</table>
