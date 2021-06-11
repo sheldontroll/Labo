@@ -5,7 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Labo.Models
 {
-    public class Cliente    {
+    public class Cliente
+    {
 
         public int Id { get; set; }
         public string Foto { get; set; }
@@ -17,6 +18,6 @@ namespace Labo.Models
         public string Sexo { get; set; }
         public DateTime FecNac { get; set; }
         public int Celular { get; set; }
-        public ICollection<OrdenMedica> OrdenMedica { get; set; }  
+        public ICollection<OrdenMedica> OrdenMedica { get; set; }
     }
 }
