@@ -7,13 +7,13 @@
     <tr>
         <th>Id</th>
         <th>Tipo de prueba</th>
-        <th>Accion</th>
+        <th>Acción</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.Id</td>
-            <td>@item.Nombre</td>            
+            <td>@item.Nombre</td>
             <td>
                 <a href="/Administrador/editarprueba/@item.Id" class="btn btn-secondary">Editar Prueba</a>
 
@@ -24,7 +24,8 @@
             </td>
         </tr>
     }
-    @if (Model.Count == 0) {
+    @if (Model.Count == 0)
+    {
         <tr>
             <td colspan="4" class="text-center">No se encontraron pruebas registradas</td>
         </tr>

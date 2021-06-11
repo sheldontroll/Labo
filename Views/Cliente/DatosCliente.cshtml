@@ -1,5 +1,6 @@
 @model Cliente
 <html>
+
 <head>
   <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -7,91 +8,93 @@
 <body>
   @{
     ViewData["Title"] = "Ingresa los datos del paciente";
-}
+  }
 
-<h1>@ViewData["Title"]</h1>
-<hr size=3>
-  <form action="" method="post">    
+  <h1>@ViewData["Title"]</h1>
+  <hr size=3>
+  <form action="" method="post">
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
         <label asp-for="Foto">Foto de Cliente</label>
-        <input type="text" class="form-control" asp-for="Foto" >
-      </div>  
+        <input type="text" class="form-control" asp-for="Foto">
+      </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
         <label asp-for="Nombre">Nombres</label>
-        <input type="text" class="form-control" asp-for="Nombre" >
-      </div>  
+        <input type="text" class="form-control" asp-for="Nombre">
+      </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
         <label asp-for="Apellido">Apellidos</label>
-        <input type="text" class="form-control" asp-for="Apellido" >
-      </div>  
+        <input type="text" class="form-control" asp-for="Apellido">
+      </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
         <label asp-for="Email">Email</label>
-        <input type="email" class="form-control" asp-for="Email" placeholder="ejemplo@gmail.com" >
-      </div>  
+        <input type="email" class="form-control" asp-for="Email" placeholder="ejemplo@gmail.com">
+      </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
         <label asp-for="Tipodocumento">Ingresa tu documento de identidad</label>
         <div class="form-inline">
-          <select asp-for="Tipodocumento" class="form-control" >
-                <option value="DNI">DNI</option>
-                <option value="CE">CE</option>
-                <option value="PAS">Pasaporte</option>
-            </select>
+          <select asp-for="Tipodocumento" class="form-control">
+            <option value="DNI">DNI</option>
+            <option value="CE">CE</option>
+            <option value="PAS">Pasaporte</option>
+          </select>
           <div class="col-md-4">
             <input type="text" class="form-control" asp-for="Documento">
           </div>
         </div>
-      </div>  
+      </div>
     </div>
 
-   <div class="form-row">
+    <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
         <label asp-for="Sexo">Selecciona tu sexo</label>
-        <select asp-for="Sexo" class="form-control" required="required" >
-            <option value="M">Masculino</option>
-            <option value="F">Femenino</option>
+        <select asp-for="Sexo" class="form-control" required="required">
+          <option value="M">Masculino</option>
+          <option value="F">Femenino</option>
         </select>
       </div>
-    </div> 
-     
+    </div>
+
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
         <label asp-for="FecNac">Selecciona tu Fecha de Nacimiento</label>
-        <input type="date" class="form-control" asp-for="FecNac" required="required" >
+        <input type="date" class="form-control" asp-for="FecNac" required="required">
       </div>
-    </div> 
-    
+    </div>
+
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
         <label asp-for="Celular">Ingresa tu celular</label>
-        <input type="number" class="form-control" asp-for="Celular" required="required" >
+        <input type="number" class="form-control" asp-for="Celular" required="required">
       </div>
-    </div> 
+    </div>
 
-        
+
     <br><br>
     <div style="text-align: center;">
-      <button style="margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="ClienteIndex">Atras</button>
+      <button style="margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente"
+        asp-action="ClienteIndex">Atrás</button>
       <button style="margin: 0 auto;" type="submit" class="btn btn-primary">Siguiente</button>
     </div>
 
   </form>
-  <h1 class="mensajeRegistrar">@ViewData["Message"]</h1>  
+  <h1 class="mensajeRegistrar">@ViewData["Message"]</h1>
 </body>
 <footer>
 
 </footer>
 
 <script src="~/js/site.js" asp-append-version="true"></script>
+
 </html>
