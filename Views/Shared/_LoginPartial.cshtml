@@ -4,15 +4,15 @@
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
-{
-    <li class="nav-item">
+{//notocar
+    <li class="nav-item flex-center" style="text-align: center;">
         <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
     </li>
-    <li class="nav-item">
-        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-            <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+    <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
         </form>
-    </li>
+    
+    <div style="width: 1px; background-color: black; height: 100%; float: left;" ></div>
 }
 else
 {

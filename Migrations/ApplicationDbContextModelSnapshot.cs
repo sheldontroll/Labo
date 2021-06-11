@@ -19,6 +19,50 @@ namespace Labo.Migrations
                 .HasAnnotation("ProductVersion", "5.0.4")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
+            modelBuilder.Entity("Labo.Models.Cliente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("Apellido")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Celular")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Documento")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("FecNac")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("Foto")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("text");
+
+                    b.Property<int?>("ReservaId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Sexo")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Tipodocumento")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReservaId");
+
+                    b.ToTable("Clientes");
+                });
+
             modelBuilder.Entity("Labo.Models.Contactanos", b =>
                 {
                     b.Property<int>("ID")
@@ -28,6 +72,9 @@ namespace Labo.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("apellidos")
+                        .HasColumnType("text");
+
+                    b.Property<string>("asunto")
                         .HasColumnType("text");
 
                     b.Property<string>("email")
@@ -46,6 +93,82 @@ namespace Labo.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("t_contactanos");
+                });
+
+            modelBuilder.Entity("Labo.Models.OrdenMedica", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<int?>("ClienteId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("ReservaId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClienteId");
+
+                    b.HasIndex("ReservaId");
+
+                    b.ToTable("OrdenMedica");
+                });
+
+            modelBuilder.Entity("Labo.Models.Prueba", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DataPruebas");
+                });
+
+            modelBuilder.Entity("Labo.Models.Reserva", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<int>("PruebaId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UserID")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("fechaPrueba")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("horaPrueba")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("sedePrueba")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PruebaId");
+
+                    b.ToTable("Reservas");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -246,6 +369,35 @@ namespace Labo.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Labo.Models.Cliente", b =>
+                {
+                    b.HasOne("Labo.Models.Reserva", null)
+                        .WithMany("Clientes")
+                        .HasForeignKey("ReservaId");
+                });
+
+            modelBuilder.Entity("Labo.Models.OrdenMedica", b =>
+                {
+                    b.HasOne("Labo.Models.Cliente", null)
+                        .WithMany("OrdenMedica")
+                        .HasForeignKey("ClienteId");
+
+                    b.HasOne("Labo.Models.Reserva", null)
+                        .WithMany("OrdenMedica")
+                        .HasForeignKey("ReservaId");
+                });
+
+            modelBuilder.Entity("Labo.Models.Reserva", b =>
+                {
+                    b.HasOne("Labo.Models.Prueba", "Prueba")
+                        .WithMany("Reservas")
+                        .HasForeignKey("PruebaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Prueba");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -295,6 +447,23 @@ namespace Labo.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Labo.Models.Cliente", b =>
+                {
+                    b.Navigation("OrdenMedica");
+                });
+
+            modelBuilder.Entity("Labo.Models.Prueba", b =>
+                {
+                    b.Navigation("Reservas");
+                });
+
+            modelBuilder.Entity("Labo.Models.Reserva", b =>
+                {
+                    b.Navigation("Clientes");
+
+                    b.Navigation("OrdenMedica");
                 });
 #pragma warning restore 612, 618
         }
