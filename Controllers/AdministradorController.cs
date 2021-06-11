@@ -21,6 +21,9 @@ namespace Labo.Controllers
             var pruebas = _context.DataPruebas.OrderBy(r => r.Nombre).ToList();
             return View(pruebas);
         }
+
+        
+
         public IActionResult AdminIndex() {
             return View();
         }
@@ -28,7 +31,17 @@ namespace Labo.Controllers
             return View();
         }
         public IActionResult Mensaje() {
-            return View();
+          var mensajes = _context.DataContactanos.OrderBy(r => r.nombres).ToList();
+            return View(mensajes);
+        }
+
+        [HttpPost]
+        public IActionResult BorrarMensaje(int ID) {
+            var mensajes = _context.DataContactanos.Find(ID);
+            _context.Remove(mensajes);
+            _context.SaveChanges();
+
+            return RedirectToAction("Mensaje");
         }
         public IActionResult OrdenesMedicas() {
             return View();
@@ -46,7 +59,6 @@ namespace Labo.Controllers
             }
             return View(r);
         }
-
 
         [HttpPost]
         public IActionResult BorrarPrueba(int id) {
