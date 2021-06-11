@@ -1,6 +1,7 @@
 @model Labo.Models.Reserva
 
 <html>
+
 <head>
   <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -8,31 +9,36 @@
 <body>
   @{
     ViewData["Title"] = "Datos de la atención";
-}
+  }
 
-<h1>@ViewData["Title"]</h1>
-<hr size=3>
-  <form action="" method="post">    
+  <h1>@ViewData["Title"]</h1>
+  <hr size=3>
+  <form action="" method="post">
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
         <label asp-for="fechaPrueba">Selecciona la fecha de tu prueba</label>
         <input type="date" class="form-control" asp-for="fechaPrueba" placeholder="ejemplo Lima">
       </div>
-    </div> 
+    </div>
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
         <label asp-for="horaPrueba">Seleccionada tu horario de atención</label>
         <select asp-for="horaPrueba" class="form-control">
-            <option value="M">Mañana</option>
-            <option value="T">tarde</option>
-            <option value="N">Noche</option>
+          <option value="M">Mañana</option>
+          <option value="T">tarde</option>
+          <option value="N">Noche</option>
         </select>
       </div>
-    </div> 
+    </div>
     <div class="form-row">
       <div class="form-group col-md-6" style="margin: 0 auto;">
         <label asp-for="Prueba">Selecciona tu tipo de prueba</label>
-        <select asp-for="PruebaId" asp-items="ViewBag.DataPruebas" type="text" class="form-control">          
+        <select asp-for="PruebaId" asp-items="ViewBag.DataPruebas" type="text" class="form-control">
+          <option selected>Antigenos</option>
+          <option>PCR</option>
+          <option>TestRapido</option>
+          <option>TMA</option>
+          <option>CLIA</option>
         </select>
       </div>
     </div>
@@ -40,27 +46,28 @@
       <div class="form-group col-md-6" style="margin: 0 auto;">
         <label asp-for="sedePrueba">Selecciona tu sede</label>
         <select asp-for="sedePrueba" class="form-control">
-            <option value="SB">San Borja</option>
-            <option value="S">Surco</option>
-            <option value="LM">La Molina</option>
-            <option value="SL">San Luis</option>
+          <option value="SB">San Borja</option>
+          <option value="S">Surco</option>
+          <option value="LM">La Molina</option>
+          <option value="SL">San Luis</option>
         </select>
       </div>
-    </div> 
+    </div>
     <br><br>
     <div style="text-align: center;">
-      <button style="margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="DatosCliente">Atras</button>
+      <button style="margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente"
+        asp-action="DatosCliente">Atras</button>
       <button style="margin: 0 auto;" type="submit" class="btn btn-primary">Siguiente</button>
-    </div>  
-    
-    
+    </div>
+
+
   </form>
-  <h1 class="mensajeRegistrar">@ViewData["Message"]</h1>  
+  <h1 class="mensajeRegistrar">@ViewData["Message"]</h1>
 </body>
 <footer>
 
 </footer>
 
 <script src="~/js/site.js" asp-append-version="true"></script>
-</html>
 
+</html>
