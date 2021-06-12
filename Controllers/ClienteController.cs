@@ -15,7 +15,8 @@ namespace Labo.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<ClienteController> _logger;
-        public ClienteController(ILogger<ClienteController> logger, ApplicationDbContext context) {
+        public ClienteController(ILogger<ClienteController> logger, ApplicationDbContext context)
+        {
             _context = context;
             _logger = logger;
         }
@@ -25,21 +26,25 @@ namespace Labo.Controllers
             return View();
         }
 
-         public IActionResult Reserva(){           
-            ViewBag.DataPruebas = _context.DataPruebas.ToList().Select(r => new SelectListItem(r.Nombre, r.Id.ToString()));  
-            return View();  
+        public IActionResult Reserva()
+        {
+            ViewBag.DataPruebas = _context.DataPruebas.ToList().Select(r => new SelectListItem(r.Nombre, r.Id.ToString()));
+            return View();
         }
         public IActionResult ReservaDomicilio()
         {
             return View();
         }
-        public IActionResult DatosCliente() {
+        public IActionResult DatosCliente()
+        {
             return View();
         }
 
         [HttpPost]
-        public IActionResult DatosCliente(Cliente c) {
-            if (ModelState.IsValid) {
+        public IActionResult DatosCliente(Cliente c)
+        {
+            if (ModelState.IsValid)
+            {
                 _context.Add(c);
                 _context.SaveChanges();
                 return RedirectToAction("Reserva");
@@ -56,6 +61,14 @@ namespace Labo.Controllers
         }
         public IActionResult ValidaCliente()
         {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult ClienteContacto(Cliente objContacto)
+        {
+            _context.Add(objContacto);
+            _context.SaveChanges();
+            ViewData["Message"] = "Se ha registrado su mensaje";
             return View();
         }
 

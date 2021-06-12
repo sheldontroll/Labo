@@ -1,0 +1,20 @@
+@model List<Cliente>
+
+@{
+    ViewData["Title"] = "Informacion del Cliente";
+}
+
+@if (Model.Count() == 0)
+{
+    <p>No tenemos clientes registrados en este momento.</p>
+}
+else
+{
+    <div class="container">
+        @foreach (var item in Model)
+        {
+            <h1>@item.Nombre @item.Apellido</h1>
+
+        }
+    </div>
+}

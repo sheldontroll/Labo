@@ -11,7 +11,7 @@ namespace Labo.Controllers
 {
     public class ContactanosController : Controller
     {
-         private readonly ILogger<ContactanosController> _logger;
+        private readonly ILogger<ContactanosController> _logger;
         private readonly ApplicationDbContext _context;
 
         public ContactanosController(ILogger<ContactanosController> logger,

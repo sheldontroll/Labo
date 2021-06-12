@@ -41,7 +41,12 @@ namespace Labo.Controllers
             var clientes = _context.Clientes.Find(Id);
             _context.Remove(clientes);
             _context.SaveChanges();
-            return RedirectToAction();
+            return RedirectToAction("ListaCliente");
+        }
+        [HttpPost]
+        public IActionResult ClienteInfo()
+        {
+            return RedirectToAction("ClienteInfo");
         }
         public IActionResult Mensaje()
         {
