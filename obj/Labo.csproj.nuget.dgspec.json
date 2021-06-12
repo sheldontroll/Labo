@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Programacion1\\ProyectoL\\Labo\\Labo.csproj": {}
+    "C:\\Programacion1\\ProyectoL\\Labo\\Labo.csproj": {}
   },
   "projects": {
-    "c:\\Programacion1\\ProyectoL\\Labo\\Labo.csproj": {
+    "C:\\Programacion1\\ProyectoL\\Labo\\Labo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Programacion1\\ProyectoL\\Labo\\Labo.csproj",
+        "projectUniqueName": "C:\\Programacion1\\ProyectoL\\Labo\\Labo.csproj",
         "projectName": "Labo",
-        "projectPath": "c:\\Programacion1\\ProyectoL\\Labo\\Labo.csproj",
+        "projectPath": "C:\\Programacion1\\ProyectoL\\Labo\\Labo.csproj",
         "packagesPath": "C:\\Users\\Sebas\\.nuget\\packages\\",
-        "outputPath": "c:\\Programacion1\\ProyectoL\\Labo\\obj\\",
+        "outputPath": "C:\\Programacion1\\ProyectoL\\Labo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sebas\\AppData\\Roaming\\NuGet\\NuGet.Config",
