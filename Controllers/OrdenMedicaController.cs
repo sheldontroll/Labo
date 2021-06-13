@@ -36,9 +36,9 @@ namespace Labo.Controllers
             return View();
         }
 
-       [HttpPost]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,UserID,Quantity,Price")] OrdenMedica OM)
+        public async Task<IActionResult> Create([Bind("Id,UserID,Cantidad,Precio,Resultado")] OrdenMedica OM)
         {
             if (ModelState.IsValid)
             {
@@ -49,7 +49,6 @@ namespace Labo.Controllers
             {
                 return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });             
             }
-            return View(OM);
         }
     }
 }

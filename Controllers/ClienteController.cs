@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Labo.Models;
 using Labo.Data;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Identity;
 
 namespace Labo.Controllers
 {
@@ -15,10 +16,14 @@ namespace Labo.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<ClienteController> _logger;
-        public ClienteController(ILogger<ClienteController> logger, ApplicationDbContext context)
+        private readonly UserManager<IdentityUser> _userManager;
+        public ClienteController(ILogger<ClienteController> logger,
+        UserManager<IdentityUser> userManager, 
+        ApplicationDbContext context)
         {
             _context = context;
             _logger = logger;
+            _userManager = userManager;
         }
 
         public IActionResult ClienteIndex()
@@ -51,18 +56,29 @@ namespace Labo.Controllers
             }
             return View(c);
         }
-        public IActionResult Sintomas()
-        {
-            return View();
-        }
+
         public IActionResult Pago()
         {
             return View();
         }
-        public IActionResult ValidaCliente()
+        public async Task<IActionResult> ValidaCliente(int? Id)
         {
-            return View();
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            var OM = await _context.DataOMs.FindAsync(Id);
+            if (OM == null)
+            {
+                return NotFound();
+            }
+
+            return View(OM);
         }
+
+
+
         [HttpPost]
         public IActionResult ClienteContacto(Cliente objContacto)
         {
@@ -70,7 +86,40 @@ namespace Labo.Controllers
             _context.SaveChanges();
             ViewData["Message"] = "Se ha registrado su mensaje";
             return View();
-        }
+        }     
+        [HttpPost]
+         public async Task<IActionResult> Add(String PruebaId, String sedePrueba, DateTime fechaPrueba, String horaPrueba)
+        {
+            var userID = _userManager.GetUserName(User);
+            if(userID == null){
+                ViewData["Message"] = "Por favor debe loguearse antes de agregar un producto";
+            }else{
+                var id = Convert.ToInt32(PruebaId);
+                var prueba = await _context.DataPruebas.FindAsync(id);
+                OrdenMedica OM = new OrdenMedica();
+                Reserva reserva = new Reserva();
+                OM.Prueba = prueba;
+                OM.Precio = prueba.Price;
+                OM.Cantidad = 1;
+                OM.Resultado = "Pendiente";
+                OM.UserID = userID;
+                OM.sedePrueba = sedePrueba;
+                OM.fechaPrueba = fechaPrueba;
+                OM.horaPrueba = horaPrueba;
+                reserva.Prueba = prueba;
+                reserva.UserID = userID;
+                reserva.sedePrueba = sedePrueba;
+                reserva.fechaPrueba = fechaPrueba;
+                reserva.horaPrueba = horaPrueba;
+                _context.Add(reserva);
+                _context.Add(OM);
+                await ValidaCliente(OM.Id);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("ValidaCliente");
+                
+            }
+            return View();
+        }    
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

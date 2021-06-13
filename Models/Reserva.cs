@@ -20,11 +20,10 @@ namespace Labo.Models
         [Required(ErrorMessage = "Por favor selecciona tu Sede")]
         public string sedePrueba { get; set; }
 
-        [Required(ErrorMessage = "Por favor selecciona el tipo de prueba")]
         public Prueba Prueba { get; set; }
         public int PruebaId { get; set; }
-        public ICollection<Cliente> Clientes { get; set; }
-        public ICollection<OrdenMedica> OrdenMedica { get; set; }
+        public virtual ICollection<Cliente> Clientes { get; set; }
+        //public virtual ICollection<OrdenMedica> OrdenMedica { get; set; }
 
     }
 }

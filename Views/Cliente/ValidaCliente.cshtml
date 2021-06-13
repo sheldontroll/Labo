@@ -1,7 +1,56 @@
-namespace Labo.Views.Cliente
-{
-    public interface ValidaCliente.cshtml
-    {
-         
-    }
+@model Labo.Models.OrdenMedica
+
+@{
+    ViewData["Title"] = "Validar Reserva";
 }
+
+<h1>Detalles de la Reserva</h1>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PruebaId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PruebaId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fechaPrueba)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fechaPrueba)
+        </dd>
+        dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.horaPrueba)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.horaPrueba)
+        </dd>
+        dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.sedePrueba)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.sedePrueba)
+        </dd>
+        dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Pruebas">Back to List</a>
+    </form>
+</div>

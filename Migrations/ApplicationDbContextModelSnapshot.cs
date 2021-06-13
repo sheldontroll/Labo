@@ -29,8 +29,8 @@ namespace Labo.Migrations
                     b.Property<string>("Apellido")
                         .HasColumnType("text");
 
-                    b.Property<int>("Celular")
-                        .HasColumnType("integer");
+                    b.Property<string>("Celular")
+                        .HasColumnType("text");
 
                     b.Property<string>("Documento")
                         .HasColumnType("text");
@@ -100,21 +100,38 @@ namespace Labo.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
+                        .HasColumnName("id")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<int?>("ClienteId")
+                    b.Property<int>("Cantidad")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("ReservaId")
+                    b.Property<decimal>("Precio")
+                        .HasColumnType("numeric");
+
+                    b.Property<int?>("PruebaId")
                         .HasColumnType("integer");
+
+                    b.Property<string>("Resultado")
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserID")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("fechaPrueba")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("horaPrueba")
+                        .HasColumnType("text");
+
+                    b.Property<string>("sedePrueba")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClienteId");
+                    b.HasIndex("PruebaId");
 
-                    b.HasIndex("ReservaId");
-
-                    b.ToTable("OrdenMedica");
+                    b.ToTable("t_OM");
                 });
 
             modelBuilder.Entity("Labo.Models.Prueba", b =>
@@ -123,6 +140,9 @@ namespace Labo.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
@@ -168,7 +188,7 @@ namespace Labo.Migrations
 
                     b.HasIndex("PruebaId");
 
-                    b.ToTable("Reservas");
+                    b.ToTable("Reserva");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -378,13 +398,11 @@ namespace Labo.Migrations
 
             modelBuilder.Entity("Labo.Models.OrdenMedica", b =>
                 {
-                    b.HasOne("Labo.Models.Cliente", null)
-                        .WithMany("OrdenMedica")
-                        .HasForeignKey("ClienteId");
+                    b.HasOne("Labo.Models.Prueba", "Prueba")
+                        .WithMany()
+                        .HasForeignKey("PruebaId");
 
-                    b.HasOne("Labo.Models.Reserva", null)
-                        .WithMany("OrdenMedica")
-                        .HasForeignKey("ReservaId");
+                    b.Navigation("Prueba");
                 });
 
             modelBuilder.Entity("Labo.Models.Reserva", b =>
@@ -449,11 +467,6 @@ namespace Labo.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Labo.Models.Cliente", b =>
-                {
-                    b.Navigation("OrdenMedica");
-                });
-
             modelBuilder.Entity("Labo.Models.Prueba", b =>
                 {
                     b.Navigation("Reservas");
@@ -462,8 +475,6 @@ namespace Labo.Migrations
             modelBuilder.Entity("Labo.Models.Reserva", b =>
                 {
                     b.Navigation("Clientes");
-
-                    b.Navigation("OrdenMedica");
                 });
 #pragma warning restore 612, 618
         }

@@ -7,6 +7,9 @@
     <tr>
         <th>Id</th>
         <th>Tipo de prueba</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th>Estado</th>
         <th>Acción</th>
     </tr>
     @foreach (var item in Model)
@@ -14,10 +17,13 @@
         <tr>
             <td>@item.Id</td>
             <td>@item.Nombre</td>
+            <td>@item.Cantidad</td>
+            <td>@item.Price</td>
+            <td>@item.Status</td>
             <td>
                 <a href="/Administrador/editarprueba/@item.Id" class="btn btn-secondary">Editar Prueba</a>
 
-                <form action="/ubicaciones/borrarPrueba" method="post" class="d-inline-block">
+                <form action="/Administrador/BorrarPrueba" method="post" class="d-inline-block">
                     <input type="hidden" name="id" value="@item.Id" />
                     <button class="btn btn-danger">Borrar</button>
                 </form>
