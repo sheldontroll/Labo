@@ -7554,24 +7554,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Diego\\.nuget\\packages\\": {}
+    "C:\\Users\\Sebas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo-1\\Labo.csproj",
+      "projectUniqueName": "c:\\Programacion1\\ProyectoL\\Labo\\Labo.csproj",
       "projectName": "Labo",
-      "projectPath": "C:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo-1\\Labo.csproj",
-      "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Diego\\Desktop\\ejercicios de Programacion I\\Labo-1\\obj\\",
+      "projectPath": "c:\\Programacion1\\ProyectoL\\Labo\\Labo.csproj",
+      "packagesPath": "C:\\Users\\Sebas\\.nuget\\packages\\",
+      "outputPath": "c:\\Programacion1\\ProyectoL\\Labo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Sebas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7639,7 +7641,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

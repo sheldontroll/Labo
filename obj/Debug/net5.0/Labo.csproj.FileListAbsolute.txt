@@ -449,3 +449,5 @@ C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo-1\obj\Debug\net5.0\Labo
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo-1\obj\Debug\net5.0\ref\Labo.dll
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo-1\obj\Debug\net5.0\Labo.pdb
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo-1\obj\Debug\net5.0\Labo.genruntimeconfig.cache
+C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Administrador\ClienteInfo.cshtml.g.cs
+C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Cliente\ClienteContacto.cshtml.g.cs
