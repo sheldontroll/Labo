@@ -5,7 +5,7 @@
 @if (SignInManager.IsSignedIn(User))
 {
 
-    @if (UserManager.GetUserName(User).Equals("heaven.valer@hotmail.com"))
+    @if (UserManager.GetUserName(User).Equals("heaven.valer@hotmail.com") || UserManager.GetUserName(User).Equals("manur.0612@gmail.com"))
     { //cambiaracaeladmin
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Administrador" asp-action="AdminIndex">Administrador</a>
@@ -20,7 +20,7 @@
             <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="ClienteIndex">Reservar Prueba</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="ClienteContacto">Contáctanos</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Contactanos" asp-action="Nocliente">Contáctanos</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="Sintomas">Ingresa Tus síntomas</a>

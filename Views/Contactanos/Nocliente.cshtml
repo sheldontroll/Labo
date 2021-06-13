@@ -1,9 +1,9 @@
 @model Labo.Models.Contactanos
 
-<form asp-controller="Contactanos" asp-action="Nocliente">
+<form asp-controller="Contactanos" asp-action="Nocliente" style="width: 600px; margin: 0 auto;">
     <label asp-for="nombres" class="control-label">Nombre</label>
     <input asp-for="nombres" class="form-control" />
-
+    
     <label asp-for="apellidos" class="control-label">Apellidos</label>
     <input asp-for="apellidos" class="form-control" />
 
@@ -15,12 +15,14 @@
      
      <label asp-for="asunto" class="control-label">Asunto</label>
      <input asp-for="asunto" class="form-control" />
+
     <label asp-for="mensaje" class="control-label">Mensaje</label>
-    <input asp-for="mensaje" class="form-control" />
+    <textarea asp-for="mensaje" class="form-control" style="height: 200px;"></textarea>
 
-
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">REGISTRAR</button>
+<br><br>
+    <div class="form-group" style="margin: 0 auto; text-align: center">
+        <button style="margin: 0 auto;" type="submit" class="btn btn-primary">REGISTRAR</button>
     </div>
+    <a asp-controller="Home" asp-action="Index">Volver al inicio</a>
 </form>
 <h1>@ViewData["Message"]</h1>
