@@ -146,7 +146,6 @@ C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Cliente\DatosClient
 C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Cliente\Pago.cshtml.g.cs
 C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Cliente\Reserva.cshtml.g.cs
 C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Cliente\ReservaDomicilio.cshtml.g.cs
-C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Cliente\Sintomas.cshtml.g.cs
 C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Cliente\ValidaCliente.cshtml.g.cs
 C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Home\Reserva.cshtml.g.cs
 C:\Programacion1\ProyectoL\Labo\bin\Debug\net5.0\Newtonsoft.Json.dll
@@ -451,3 +450,9 @@ C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo-1\obj\Debug\net5.0\Labo
 C:\Users\Diego\Desktop\ejercicios de Programacion I\Labo-1\obj\Debug\net5.0\Labo.genruntimeconfig.cache
 C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Administrador\ClienteInfo.cshtml.g.cs
 C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Cliente\ClienteContacto.cshtml.g.cs
+C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Administrador\BorrarPrueba.cshtml.g.cs
+C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\OrdenesMedicas\Create.cshtml.g.cs
+C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\OrdenesMedicas\Delete.cshtml.g.cs
+C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\OrdenesMedicas\Details.cshtml.g.cs
+C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\OrdenesMedicas\Edit.cshtml.g.cs
+C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\OrdenesMedicas\Index.cshtml.g.cs

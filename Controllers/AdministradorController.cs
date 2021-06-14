@@ -35,6 +35,8 @@ namespace Labo.Controllers
             var clientes = _context.Clientes.OrderBy(r => r.Nombre).ToList();
             return View(clientes);
         }
+
+        
         [HttpPost]
         public IActionResult BorrarCliente(int Id)
         {
@@ -65,7 +67,8 @@ namespace Labo.Controllers
         }
         public IActionResult OrdenesMedicas()
         {
-            return View();
+            var ordenes = _context.DataOMs.OrderBy(r => r.UserID).ToList();
+            return View(ordenes);
         }
         public IActionResult nuevaPrueba()
         {
