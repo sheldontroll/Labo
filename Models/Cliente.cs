@@ -17,7 +17,7 @@ namespace Labo.Models
         public string Documento { get; set; }
         public string Sexo { get; set; }
         public DateTime FecNac { get; set; }
-        public int Celular { get; set; }
-        public ICollection<OrdenMedica> OrdenMedica { get; set; }
+        public string Celular { get; set; }
+        //public ICollection<OrdenMedica> OrdenMedica { get; set; }
     }
 }

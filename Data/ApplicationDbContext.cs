@@ -15,5 +15,6 @@ namespace Labo.Data
         public DbSet<Labo.Models.Cliente> Clientes { get; set; }
         public DbSet<Labo.Models.Reserva> Reservas { get; set; }
         public DbSet<Labo.Models.Contactanos> DataContactanos {get;set;}
+        public DbSet<Labo.Models.OrdenMedica> DataOMs {get;set;}
     }
 }

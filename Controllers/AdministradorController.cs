@@ -20,7 +20,7 @@ namespace Labo.Controllers
         }
         public IActionResult pruebas()
         {
-            var pruebas = _context.DataPruebas.OrderBy(r => r.Nombre).ToList();
+            var pruebas = _context.DataPruebas.OrderBy(r => r.Id).ToList();
             return View(pruebas);
         }
 
@@ -94,23 +94,50 @@ namespace Labo.Controllers
             return RedirectToAction("pruebas");
         }
 
-        public IActionResult editarPrueba(int id)
+        public async Task<IActionResult> editarPrueba(int? id)
         {
-            var prueba = _context.DataPruebas.Find(id);
-            return View(prueba);
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var pruebas = await _context.DataPruebas.FindAsync(id);
+            if (pruebas == null)
+            {
+                return NotFound();
+            }
+            return View(pruebas);
         }
 
         [HttpPost]
-        public IActionResult editarPrueba(Prueba r)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> editarPrueba(int id, [Bind("Id,Nombre,Cantidad,Price,Status")] Prueba prueba)
         {
-            if (ModelState.IsValid)
-            {
-                var prueba = _context.DataPruebas.Find(r.Id);
-                prueba.Nombre = r.Nombre;
-                _context.SaveChanges();
+            if (id != prueba.Id){
+                return NotFound();
+            }
+
+            if (ModelState.IsValid){
+                try{
+                    _context.Update(prueba);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException){
+                    if (!PruebaExists(prueba.Id))
+                    {
+                        return NotFound();
+                    }
+                    else{
+                        throw;
+                    }
+                }
                 return RedirectToAction("pruebas");
             }
-            return View(r);
+            return View();
+        }
+
+        private bool PruebaExists(int id){
+            return _context.DataPruebas.Any(e => e.Id == id);
         }
 
     }

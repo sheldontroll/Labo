@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -21,20 +22,8 @@ namespace Labo.Controllers
             _context = context;
             _userManager = userManager;
         }
-
-        [HttpPost]
-        public IActionResult Reserva(Reserva r) {
-            var userID = _userManager.GetUserName(User);
-            if (ModelState.IsValid) {                
-                r.UserID=userID;
-                _context.Add(r);
-                _context.SaveChanges();
-                return RedirectToAction("ValidaCliente");
-            }
-            return View(r);
-        }
-
-
+         
+        
 
     }
 }
