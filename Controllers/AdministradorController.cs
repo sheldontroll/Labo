@@ -67,8 +67,23 @@ namespace Labo.Controllers
         }
         public IActionResult OrdenesMedicas()
         {
-            var ordenes = _context.DataOMs.OrderBy(r => r.UserID).ToList();
-            return View(ordenes);
+            var ordenes = _context.DataOMs.ToList();
+            List<OMD> mostrar = new List<OMD>(); 
+            
+            foreach (var item in ordenes)
+            {
+                OMD datos = new OMD();
+                datos.id = item.id;
+                datos.resultado = item.Resultado;
+                datos.email = item.UserID;
+                Console.WriteLine(" " + item.id);
+                var clients = _context.Clientes.Find(item.id);
+                
+                datos.nombre = clients.Nombre;
+                datos.apellidos = clients.Apellido;
+                mostrar.Add(datos);
+            }
+            return View(mostrar);
         }
         public IActionResult nuevaPrueba()
         {

@@ -10,7 +10,7 @@ namespace Labo.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
-        public int Id { get; set; }
+        public int id { get; set; }
         public String UserID { get; set; }
         public Prueba Prueba {get; set;}
         public DateTime fechaPrueba { get; set; }
@@ -19,5 +19,7 @@ namespace Labo.Models
         public int Cantidad {get; set;}
         public Decimal Precio { get; set; }
         public String Resultado { get; set; }
+
+      
     }
 }

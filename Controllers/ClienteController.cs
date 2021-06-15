@@ -113,7 +113,7 @@ namespace Labo.Controllers
                 reserva.horaPrueba = horaPrueba;
                 _context.Add(reserva);
                 _context.Add(OM);
-                await ValidaCliente(OM.Id);
+                await ValidaCliente(OM.id);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("ValidaCliente");
                 

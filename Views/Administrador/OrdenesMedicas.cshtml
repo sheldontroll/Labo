@@ -1,4 +1,4 @@
-@model List<OrdenMedica>
+@model List<OMD>
 
 
 <h1>Lista de Órdenes Médicas</h1>
@@ -19,10 +19,10 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.UserID</td>
-                <td>@item.horaPrueba</td>
-                <td>@item.sedePrueba</td>
-                <td>@item.Resultado</td>
+                <td>@item.email</td>
+                <td>@item.nombre</td>
+                <td>@item.apellidos</td>
+                <td>@item.resultado</td>
             </tr>
         }
     }

@@ -19,6 +19,21 @@ namespace Labo.Migrations
                 .HasAnnotation("ProductVersion", "5.0.4")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
+            modelBuilder.Entity("ClienteReserva", b =>
+                {
+                    b.Property<int>("ClientesId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ReservaId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("ClientesId", "ReservaId");
+
+                    b.HasIndex("ReservaId");
+
+                    b.ToTable("ClienteReserva");
+                });
+
             modelBuilder.Entity("Labo.Models.Cliente", b =>
                 {
                     b.Property<int>("Id")
@@ -47,9 +62,6 @@ namespace Labo.Migrations
                     b.Property<string>("Nombre")
                         .HasColumnType("text");
 
-                    b.Property<int?>("ReservaId")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Sexo")
                         .HasColumnType("text");
 
@@ -57,8 +69,6 @@ namespace Labo.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ReservaId");
 
                     b.ToTable("Clientes");
                 });
@@ -97,13 +107,16 @@ namespace Labo.Migrations
 
             modelBuilder.Entity("Labo.Models.OrdenMedica", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasColumnName("id")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<int>("Cantidad")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("ClienteId")
                         .HasColumnType("integer");
 
                     b.Property<decimal>("Precio")
@@ -127,11 +140,13 @@ namespace Labo.Migrations
                     b.Property<string>("sedePrueba")
                         .HasColumnType("text");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
+
+                    b.HasIndex("ClienteId");
 
                     b.HasIndex("PruebaId");
 
-                    b.ToTable("t_OM");
+                    b.ToTable("DataOMs");
                 });
 
             modelBuilder.Entity("Labo.Models.Prueba", b =>
@@ -188,7 +203,7 @@ namespace Labo.Migrations
 
                     b.HasIndex("PruebaId");
 
-                    b.ToTable("Reserva");
+                    b.ToTable("Reservas");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -389,15 +404,27 @@ namespace Labo.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Labo.Models.Cliente", b =>
+            modelBuilder.Entity("ClienteReserva", b =>
                 {
+                    b.HasOne("Labo.Models.Cliente", null)
+                        .WithMany()
+                        .HasForeignKey("ClientesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Labo.Models.Reserva", null)
-                        .WithMany("Clientes")
-                        .HasForeignKey("ReservaId");
+                        .WithMany()
+                        .HasForeignKey("ReservaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Labo.Models.OrdenMedica", b =>
                 {
+                    b.HasOne("Labo.Models.Cliente", null)
+                        .WithMany("OrdenMedica")
+                        .HasForeignKey("ClienteId");
+
                     b.HasOne("Labo.Models.Prueba", "Prueba")
                         .WithMany()
                         .HasForeignKey("PruebaId");
@@ -467,14 +494,14 @@ namespace Labo.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Labo.Models.Cliente", b =>
+                {
+                    b.Navigation("OrdenMedica");
+                });
+
             modelBuilder.Entity("Labo.Models.Prueba", b =>
                 {
                     b.Navigation("Reservas");
-                });
-
-            modelBuilder.Entity("Labo.Models.Reserva", b =>
-                {
-                    b.Navigation("Clientes");
                 });
 #pragma warning restore 612, 618
         }
