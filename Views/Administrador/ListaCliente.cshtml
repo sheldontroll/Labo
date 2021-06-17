@@ -4,7 +4,7 @@
 <h1>Lista de Clientes</h1>
 
 <table class="table border">
-    <tr>
+    <tr class="text-center">
         <th>Id</th>
         <th class="text-center">Foto</th>
         <th>Nombres</th>
@@ -12,23 +12,21 @@
     </tr>
     @foreach (var item in Model)
     {
-        <tr>
+        <tr class="text-center">
             <td>@item.Id</td>
             <td><img src="@item.Foto" alt="" class="img-thumbnail" style="max-width: 125px;max-height:75px;">
             </td>
             <td>@item.Nombre</td>
             <td>@item.Apellido</td>
-            <td>
+            <td class="text-right">
 
-                <a href="/Administrador/ClienteInfo" action="/Administrador/ClienteInfo" method="post"><img
-                    src="~/imagenes/vistaprevia.jpeg" alt="" style="width: 50px; height:50px;"></a>
-
-            </td>
-            <td>
+                <button class="btn btn-primary"><a style="outline: none; color:white" href="/Administrador/ClienteInfo"
+                    action="/Administrador/ClienteInfo" method="post">Ver ficha</a></button>
                 <form action="/Administrador/borrarCliente" method="post" class="d-inline-block">
                     <input type="hidden" name="ID" value="@item.Id" />
                     <button class="btn btn-danger">Borrar</button>
                 </form>
+
             </td>
         </tr>
     }
