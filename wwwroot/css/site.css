@@ -90,4 +90,18 @@ div.carousel{
 div.titulo{
   text-align: center; 
 }
-
+/*Diego css*/
+.subtitulo{
+  font-style: oblique;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  color: #9E9E9E;
+}
+p{
+  margin: 20px;
+}
+h2{
+  margin: 10px;
+  color: #6b717f;
+}
