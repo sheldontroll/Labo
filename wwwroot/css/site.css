@@ -22,7 +22,28 @@ a {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+  
 }
+/*PRUEBA
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #0088a9;
+}
+
+
+*/
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -57,7 +78,9 @@ html {
   position: relative;
   min-height: 100%;
 }
-
+head{
+  margin: auto;
+}
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
@@ -77,13 +100,17 @@ h1{
   text-align: center;
 }
 div.carousel{
-  height: 100%;
-  padding: 50;
+  height: 500px;
   margin: 0 auto;
   width: 500px;
   height: 400px;
-  padding-bottom: 400px;
+  padding-bottom: auto;
   position: relative;
+}
+.d-block{
+  width: 400px;
+  height: 400px;
+  margin-bottom: auto;
 }
 /*Diego css*/
 .subtitulo{
@@ -172,3 +199,27 @@ form{
   width: 300px;
   height:200px;
 }
+.control-label{
+  color: #414141;
+  font-weight: bold;
+  margin: auto;
+  padding:10px;
+  font-size:18px;
+}
+
+/*probando CSS NAVEGADOR*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin-bottom: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20%;
+  background-color: #24252a;
+}
+
+
