@@ -1,6 +1,8 @@
+<link rel="stylesheet" href="~/css/site.css" />
+
 @model Labo.Models.Contactanos
 
-<form asp-controller="Contactanos" asp-action="Nocliente" style="width: 600px; margin: 0 auto;">
+<form asp-controller="Contactanos" asp-action="Nocliente">
     <label asp-for="nombres" class="control-label">Nombre</label>
     <input asp-for="nombres" class="form-control" />
 
@@ -23,10 +25,9 @@
     <div class="form-group" style="margin: 0 auto; text-align: center">
         <button style="margin: 0 auto;" type="submit" class="btn btn-primary">REGISTRAR</button>
         <br>
-        <br>
-        <button asp-controller="Home" asp-action="Index" style="margin: 0 auto;" class="btn btn-primary">Volver a
-            inicio</button>
+        <br>    
     </div>
-
 </form>
+<br>
+<button asp-controller="Home" asp-action="Index" style="margin: 0 auto;" class="btn btn-primary">Volver a inicio</button>
 <h1>@ViewData["Message"]</h1>
