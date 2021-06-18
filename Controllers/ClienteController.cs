@@ -18,7 +18,7 @@ namespace Labo.Controllers
         private readonly ILogger<ClienteController> _logger;
         private readonly UserManager<IdentityUser> _userManager;
         public ClienteController(ILogger<ClienteController> logger,
-        UserManager<IdentityUser> userManager, 
+        UserManager<IdentityUser> userManager,
         ApplicationDbContext context)
         {
             _context = context;
@@ -44,6 +44,10 @@ namespace Labo.Controllers
         {
             return View();
         }
+        public IActionResult PruebaConfirmacion()
+        {
+            return View();
+        }
 
         [HttpPost]
         public IActionResult DatosCliente(Cliente c)
@@ -56,6 +60,7 @@ namespace Labo.Controllers
             }
             return View(c);
         }
+
 
         public IActionResult Pago()
         {
@@ -86,14 +91,17 @@ namespace Labo.Controllers
             _context.SaveChanges();
             ViewData["Message"] = "Se ha registrado su mensaje";
             return View();
-        }     
+        }
         [HttpPost]
-         public async Task<IActionResult> Add(String PruebaId, String sedePrueba, DateTime fechaPrueba, String horaPrueba)
+        public async Task<IActionResult> Add(String PruebaId, String sedePrueba, DateTime fechaPrueba, String horaPrueba)
         {
             var userID = _userManager.GetUserName(User);
-            if(userID == null){
+            if (userID == null)
+            {
                 ViewData["Message"] = "Por favor debe loguearse antes de agregar un producto";
-            }else{
+            }
+            else
+            {
                 var id = Convert.ToInt32(PruebaId);
                 var prueba = await _context.DataPruebas.FindAsync(id);
                 OrdenMedica OM = new OrdenMedica();
@@ -116,10 +124,10 @@ namespace Labo.Controllers
                 await ValidaCliente(OM.id);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("ValidaCliente");
-                
+
             }
             return View();
-        }    
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
