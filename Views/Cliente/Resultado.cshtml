@@ -1,0 +1,27 @@
+@model List<OrdenMedica>
+
+   <h1>  Resultados</h1>
+    @if(Model.Count == 0){
+        <div class="alert alert-warning text-center"> aún no hay resultados registrados</div>
+    }
+    else {
+                <ul class="list-group">
+    @foreach (var p in Model)
+    {
+         <li class="list-group-item list-group-item-primary">        
+    <form class="text-center" style="width: 400px; margin: 20px auto;" type="submit">
+          <div  class="row flex-center" style="text-align: center;">Resultado: @p.Resultado
+  </div>
+<div class="row flex-center" style="text-align: center;">@p.fechaPrueba </div>
+<br>
+
+    </form>
+    </li>
+    } 
+    
+
+</ul>
+    }
+        
+<script src="~/js/site.js" asp-append-version="true"></script>
+</html>

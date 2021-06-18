@@ -126,5 +126,10 @@ namespace Labo.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+      
+        public IActionResult Resultado(){
+            var resultados =  _context.DataOMs.OrderBy(x => x.Resultado).ToList();
+            return View(resultados);
     }
+}
 }
