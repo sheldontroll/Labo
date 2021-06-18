@@ -1,0 +1,37 @@
+<html>
+<head>
+  <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+@{
+  ViewData["Title"] = "Menú de Administrador";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr size=3>
+<form>
+  <div class="row flex-center" style="text-align: center;">
+      <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary" ascp-controller="Administrador" asp-action="ListaCliente">Ver Lista de Clientes</button>
+  </div>
+  <br>
+  <div class="row flex-center" style="text-align: center;">
+      <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Administrador" asp-action="Mensaje">Ver Mensajes</button> 
+  </div>
+  <br>
+  <div class="row flex-center" style="text-align: center;">
+      <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Administrador" asp-action="OrdenesMedicas">Ver Ordenes Médicas</button> 
+  </div>
+  <br>
+  <div class="row flex-center" style="text-align: center;">
+      <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Administrador" asp-action="pruebas">Mantenimiento de Pruebas</button> 
+  </div>
+
+</form>
+</body>
+<footer>
+
+</footer>
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+</html>

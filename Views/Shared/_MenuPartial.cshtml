@@ -1,0 +1,35 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+
+    @if (UserManager.GetUserName(User).Equals("heaven.valer@hotmail.com") || UserManager.GetUserName(User).Equals("manur.0612@gmail.com"))
+    { //cambiaracaeladmin
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Administrador" asp-action="AdminIndex">Administrador</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="ClienteIndex">Reservar Prueba</a>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="ClienteIndex">Reservar Prueba</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Contactanos" asp-action="Nocliente">Contáctanos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="Sintomas">Ingresa Tus síntomas</a>
+        </li>
+    }
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Contactanos" asp-action="Nocliente">Contactanos</a>
+    </li>
+}
