@@ -100,9 +100,8 @@ h1{
   text-align: center;
 }
 div.carousel{
-  height: 500px;
   margin: 0 auto;
-  width: 500px;
+  width: 1000px;
   height: 400px;
   padding-bottom: auto;
   position: relative;
