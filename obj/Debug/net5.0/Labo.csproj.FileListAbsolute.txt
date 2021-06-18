@@ -646,3 +646,4 @@ C:\Users\Diego\Desktop\Proyecto Final\Labo\obj\Debug\net5.0\Labo.dll
 C:\Users\Diego\Desktop\Proyecto Final\Labo\obj\Debug\net5.0\ref\Labo.dll
 C:\Users\Diego\Desktop\Proyecto Final\Labo\obj\Debug\net5.0\Labo.pdb
 C:\Users\Diego\Desktop\Proyecto Final\Labo\obj\Debug\net5.0\Labo.genruntimeconfig.cache
+C:\Programacion1\ProyectoL\Labo\obj\Debug\net5.0\Razor\Views\Cliente\PruebaConfirmacion.cshtml.g.cs

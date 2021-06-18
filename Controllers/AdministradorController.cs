@@ -85,6 +85,19 @@ namespace Labo.Controllers
             }
             return View(mostrar);
         }
+
+        public IActionResult modificarOMD   (int id,string dni,string nombre,string apellido,string resultado,string select){
+
+                var clients = _context.DataOMs.Find(id);
+                OrdenMedica datos = new OrdenMedica();
+                clients.Resultado = select;
+                Console.WriteLine(" " + select);
+                Console.WriteLine(" " + id);
+                _context.Update(clients);
+                _context.SaveChanges();
+                return RedirectToAction("OrdenesMedicas","Administrador");
+        }
+
         public IActionResult nuevaPrueba()
         {
             return View();

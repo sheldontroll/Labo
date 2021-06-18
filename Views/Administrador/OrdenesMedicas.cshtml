@@ -5,10 +5,12 @@
 
 <table class="table border">
     <tr>
+        <th>Id</th>
         <th>Dni</th>
         <th>Nombres</th>
         <th>Apellidos</th>
         <th>Documento</th>
+        <th> Modificar Resultado</th>
     </tr>
     @if (Model.Count == 0)
     {
@@ -19,10 +21,23 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.dni</td>
-                <td>@item.nombre</td>
-                <td>@item.apellidos</td>
-                <td>@item.resultado</td>
+                <form asp-action="ModificarOMD" asp-controller="Administrador">
+                <td> <input value="@item.id" name="id" hidden> @item.id</td>
+                <td><input value="@item.dni" name="dni" hidden>@item.dni</td>
+                <td><input value="@item.nombre" name="nombre" hidden>@item.nombre </td>
+                <td><input value="@item.apellidos" name="apellidos" hidden>@item.apellidos</td>
+                <td><input value="@item.resultado" name="resultado" hidden >@item.resultado </td>
+                <td> <select name="select">
+                    <option value="positivo">Positivo</option>
+                    <option value="negativo">Negativo</option>
+                    </select> 
+                </td>
+                <td>
+                    <button class="btn btn-primary"> 
+                        Modificar
+                    </button>
+                </td>
+                </form>
             </tr>
         }
     }
