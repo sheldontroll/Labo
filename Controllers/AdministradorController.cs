@@ -78,7 +78,7 @@ namespace Labo.Controllers
                 datos.email = item.UserID;
                 Console.WriteLine(" " + item.id);
                 var clients = _context.Clientes.Find(item.id);
-                
+                datos.dni = clients.Documento;
                 datos.nombre = clients.Nombre;
                 datos.apellidos = clients.Apellido;
                 mostrar.Add(datos);
