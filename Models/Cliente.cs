@@ -19,6 +19,6 @@ namespace Labo.Models
         public DateTime FecNac { get; set; }
         public string Celular { get; set; }
         public ICollection<OrdenMedica> OrdenMedica { get; set; }
-        public ICollection<Reserva> Reserva { get; set; }
+        //public ICollection<Reserva> Reserva { get; set; }
     }
 }

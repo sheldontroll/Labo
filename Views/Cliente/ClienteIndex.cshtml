@@ -15,10 +15,6 @@
       <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="Datoscliente">Atención en Laboratorio</button>
   </div>
   <br>
-  <div class="row flex-center" style="text-align: center;">
-      <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="ReservaDomicilio">Atención a domicilio</button> 
-  </div>
-
   <br><br>
   <h1>Tus pruebas programadas</h1>
   <hr size=41>
@@ -27,7 +23,7 @@
   </div>
   <br>
   <div class="row flex-center" style="text-align: center;">
-      <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary">Pruebas Agendadas</button> 
+      <button style="width: 400px; margin: 0 auto;" type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="Agenda">Pruebas Agendadas</button> 
   </div>
 </form>
 </body>
