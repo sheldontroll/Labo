@@ -21,32 +21,8 @@ a {
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #1b6ec2;
-  border-color: #1861ac;
-  
+  border-color: #1861ac; 
 }
-
-
-/*PRUEBA
-.nav__links {
-  list-style: none;
-  display: flex;
-}
-
-.nav__links li {
-  padding: 0px 20px;
-}
-
-.nav__links li a {
-  transition: color 0.3s ease 0s;
-}
-
-.nav__links li a:hover {
-  color: #0088a9;
-}
-
-
-*/
-
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
