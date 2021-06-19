@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diego\\Desktop\\Proyecto Final\\Labo\\Labo\\Labo.csproj": {}
+    "C:\\Users\\Diego\\Desktop\\Nueva carpeta\\Labo\\Labo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diego\\Desktop\\Proyecto Final\\Labo\\Labo\\Labo.csproj": {
+    "C:\\Users\\Diego\\Desktop\\Nueva carpeta\\Labo\\Labo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego\\Desktop\\Proyecto Final\\Labo\\Labo\\Labo.csproj",
+        "projectUniqueName": "C:\\Users\\Diego\\Desktop\\Nueva carpeta\\Labo\\Labo.csproj",
         "projectName": "Labo",
-        "projectPath": "C:\\Users\\Diego\\Desktop\\Proyecto Final\\Labo\\Labo\\Labo.csproj",
+        "projectPath": "C:\\Users\\Diego\\Desktop\\Nueva carpeta\\Labo\\Labo.csproj",
         "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diego\\Desktop\\Proyecto Final\\Labo\\Labo\\obj\\",
+        "outputPath": "C:\\Users\\Diego\\Desktop\\Nueva carpeta\\Labo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config"
