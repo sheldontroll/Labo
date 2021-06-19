@@ -137,7 +137,7 @@ namespace Labo.Controllers
                 _context.Add(OM);
                 await ValidaCliente(OM.id);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("ValidaCliente");
+                return RedirectToAction("Index","Home");
                 
             }
             return View();
