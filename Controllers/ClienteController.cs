@@ -137,7 +137,7 @@ namespace Labo.Controllers
                 _context.Add(OM);
                 await ValidaCliente(OM.id);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("ValidaCliente");
+                return RedirectToAction("Index","Home");
                 
             }
             return View();
@@ -148,5 +148,21 @@ namespace Labo.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+      
+        public IActionResult Resultado(){
+             var userID = _userManager.GetUserName(User);
+            var resultado = _context.DataOMs;
+            Console.WriteLine(" " + userID);
+            List<OrdenMedica> lomd = new List<OrdenMedica>();
+            foreach (var item in resultado)
+            {
+                if (item.UserID.Equals(userID))
+                {
+                    lomd.Add(item);
+                }
+            }
+        
+            return View(lomd);
     }
+}
 }
