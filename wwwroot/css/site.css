@@ -4,7 +4,7 @@ for details on configuring this project to bundle and minify static web assets. 
 a.navbar-brand {
   white-space: normal;
   text-align: center;
-  word-break: break-all;
+
 }
 
 /* Provide sufficient contrast against white background */
@@ -16,13 +16,36 @@ a {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+  margin-left: 200px;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+  
 }
+
+/*PRUEBA
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #0088a9;
+}
+
+
+*/
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -57,7 +80,9 @@ html {
   position: relative;
   min-height: 100%;
 }
-
+head{
+  margin: auto;
+}
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
@@ -77,12 +102,126 @@ h1{
   text-align: center;
 }
 div.carousel{
-  height: 100%;
-  padding: 50;
   margin: 0 auto;
-  width: 500px;
+  width: 1000px;
   height: 400px;
-  padding-bottom: 400px;
+  padding-bottom: auto;
   position: relative;
 }
+.d-block{
+  width: 400px;
+  height: 400px;
+  margin-bottom: auto;
+}
+/*Diego css*/
+.subtitulo{
+  font-style: oblique;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  color: #9E9E9E;
+}
+p{
+  margin: 20px;
+}
+h2{
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  color: #6b717f;
+}h4{
+  margin: 50px;
+  color: #414141;
+}
+/*agregando estilo de botones*/
+.btn {
+  position: relative;
+  display: block;
+  height: 77px;
+  width: 200px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: #000000;
+  
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  overflow: hidden;
+  transition: all 500ms ease;
+  border: 2px solid #000000;
+  margin-bottom: 40px;
+  z-index: 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  background-color: #20e2d7;
+  transition: all 500ms ease;
+  z-index: -1;
+}
+.btn-primary::before{
+    left: -520px;
+    right: 0;
+    width: 100%;
+    height: 150%;
+    transition: all 750ms ease;
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px #20e2d7, 0 0 20px #20e2d7, 0 0 20px #20e2d7;
+  }
+  .btn-primary:hover::before {
+    left: 520px;
+  }
+  
+  @keyframes shadow-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(32, 226, 215, 0.6);
+    }
+    100% {
+      box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0);
+    }
+  }
+/*css de formulario CONTACTANOS*/
+form{
+  width: 600px; 
+  margin: 0 auto;
+  border: transparent;
+  border-radius: 10px;
+  
+
+}
+.tipopruebas{
+  display:block;
+  margin:auto;
+  margin-top: 20px;
+  width: 300px;
+  height:200px;
+}
+.control-label{
+  color: #414141;
+  font-weight: bold;
+  margin: auto;
+  padding:10px;
+  font-size:18px;
+}
+
+/*probando CSS NAVEGADOR*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin-bottom: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20%;
+  background-color: #24252a;
+}
+/**/
 

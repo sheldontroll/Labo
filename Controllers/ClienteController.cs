@@ -40,6 +40,11 @@ namespace Labo.Controllers
         {
             return View();
         }
+
+        public IActionResult ValidaCliente()
+        {
+            return View();
+        }
         public IActionResult DatosCliente()
         {
             return View();
@@ -76,6 +81,23 @@ namespace Labo.Controllers
 
             return View(OM);
         }
+
+        public IActionResult Agenda()
+        {
+            var userID = _userManager.GetUserName(User);
+            var agenda = _context.DataOMs;
+            Console.WriteLine(" " + userID);
+            List<OrdenMedica> lomd = new List<OrdenMedica>();
+            foreach (var item in agenda)
+            {
+                if (item.UserID.Equals(userID))
+                {
+                    lomd.Add(item);
+                }
+            }
+        
+            return View(lomd);
+        }   
 
 
 

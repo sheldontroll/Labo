@@ -78,13 +78,26 @@ namespace Labo.Controllers
                 datos.email = item.UserID;
                 Console.WriteLine(" " + item.id);
                 var clients = _context.Clientes.Find(item.id);
-                
+                datos.dni = clients.Documento;
                 datos.nombre = clients.Nombre;
                 datos.apellidos = clients.Apellido;
                 mostrar.Add(datos);
             }
             return View(mostrar);
         }
+
+        public IActionResult modificarOMD   (int id,string dni,string nombre,string apellido,string resultado,string select){
+
+                var clients = _context.DataOMs.Find(id);
+                OrdenMedica datos = new OrdenMedica();
+                clients.Resultado = select;
+                Console.WriteLine(" " + select);
+                Console.WriteLine(" " + id);
+                _context.Update(clients);
+                _context.SaveChanges();
+                return RedirectToAction("OrdenesMedicas","Administrador");
+        }
+
         public IActionResult nuevaPrueba()
         {
             return View();

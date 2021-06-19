@@ -22,7 +22,7 @@ namespace Labo.Models
 
         public Prueba Prueba { get; set; }
         public int PruebaId { get; set; }
-        public virtual ICollection<Cliente> Clientes { get; set; }
+        //public virtual ICollection<Cliente> Clientes { get; set; }
         //public virtual ICollection<OrdenMedica> OrdenMedica { get; set; }
 
     }
