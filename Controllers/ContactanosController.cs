@@ -38,5 +38,10 @@ namespace Labo.Controllers
             return View();
         }
 
+        public IActionResult regresar(){
+
+            return RedirectToAction("Index" , "Home");
+        }
+
     }
 }
