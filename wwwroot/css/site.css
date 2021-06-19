@@ -16,6 +16,7 @@ a {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+  margin-left: 200px;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -128,7 +129,7 @@ h2{
   margin: auto;
   color: #6b717f;
 }h4{
-  margin: 10px;
+  margin: 50px;
   color: #414141;
 }
 /*agregando estilo de botones*/
