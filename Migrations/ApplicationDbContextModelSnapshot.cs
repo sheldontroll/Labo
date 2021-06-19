@@ -167,9 +167,6 @@ namespace Labo.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<int?>("ClienteId")
-                        .HasColumnType("integer");
-
                     b.Property<int>("PruebaId")
                         .HasColumnType("integer");
 
@@ -188,8 +185,6 @@ namespace Labo.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ClienteId");
 
                     b.HasIndex("PruebaId");
 
@@ -409,10 +404,6 @@ namespace Labo.Migrations
 
             modelBuilder.Entity("Labo.Models.Reserva", b =>
                 {
-                    b.HasOne("Labo.Models.Cliente", null)
-                        .WithMany("Reserva")
-                        .HasForeignKey("ClienteId");
-
                     b.HasOne("Labo.Models.Prueba", "Prueba")
                         .WithMany("Reservas")
                         .HasForeignKey("PruebaId")
@@ -476,8 +467,6 @@ namespace Labo.Migrations
             modelBuilder.Entity("Labo.Models.Cliente", b =>
                 {
                     b.Navigation("OrdenMedica");
-
-                    b.Navigation("Reserva");
                 });
 
             modelBuilder.Entity("Labo.Models.Prueba", b =>
