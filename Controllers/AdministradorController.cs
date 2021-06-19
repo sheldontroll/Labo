@@ -77,10 +77,11 @@ namespace Labo.Controllers
                 datos.resultado = item.Resultado;
                 datos.email = item.UserID;
                 Console.WriteLine(" " + item.id);
-                var clients = _context.Clientes.Find(item.id);
-                datos.dni = clients.Documento;
-                datos.nombre = clients.Nombre;
-                datos.apellidos = clients.Apellido;
+                var ra = _context.Clientes.Find(item.id);
+                Console.WriteLine(" " + ra.Documento);
+                datos.dni = ra.Documento;
+                datos.nombre = ra.Nombre;
+                datos.apellidos = ra.Apellido;
                 mostrar.Add(datos);
             }
             return View(mostrar);
