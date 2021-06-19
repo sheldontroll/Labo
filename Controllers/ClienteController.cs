@@ -150,8 +150,19 @@ namespace Labo.Controllers
         }
       
         public IActionResult Resultado(){
-            var resultados =  _context.DataOMs.OrderBy(x => x.Resultado).ToList();
-            return View(resultados);
+             var userID = _userManager.GetUserName(User);
+            var resultado = _context.DataOMs;
+            Console.WriteLine(" " + userID);
+            List<OrdenMedica> lomd = new List<OrdenMedica>();
+            foreach (var item in resultado)
+            {
+                if (item.UserID.Equals(userID))
+                {
+                    lomd.Add(item);
+                }
+            }
+        
+            return View(lomd);
     }
 }
 }

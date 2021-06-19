@@ -5,11 +5,11 @@
         <div class="alert alert-warning text-center"> aún no hay resultados registrados</div>
     }
     else {
-                <ul class="list-group">
+                <ul class="list-group" style="width: 200px; margin: 20px auto;">
     @foreach (var p in Model)
     {
          <li class="list-group-item list-group-item-primary">        
-    <form class="text-center" style="width: 400px; margin: 20px auto;" type="submit">
+    <form class="text-center" style="width: 200px; margin: 20px auto;" type="submit">
           <div  class="row flex-center" style="text-align: center;">Resultado: @p.Resultado
   </div>
 <div class="row flex-center" style="text-align: center;">@p.fechaPrueba </div>
